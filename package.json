@@ -1,0 +1,35 @@
+{
+  "name": "guestara",
+  "version": "1.0.0",
+  "description": "services management backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "keywords": [
+    "menu",
+    "restaurant",
+    "booking",
+    "pricing",
+    "nodejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18yuv/guestara.git"
+  },
+  "author": "yuvraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/18yuv/guestara/issues"
+  },
+  "homepage": "https://github.com/18yuv/guestara#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "mongoose": "^9.1.5",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.11"
+  }
+}
