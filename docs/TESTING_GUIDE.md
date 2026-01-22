@@ -1,13 +1,11 @@
-
 # Testing Guide
-
 This guide walks you through testing all the main features of the Menu Management System.
 
 ## Setup
 
 1. Make sure the server is running:
 ```bash
-npm run dev
+npm start
 ```
 
 2. You can use any HTTP client (Postman, Insomnia, curl, or Thunder Client in VS Code)

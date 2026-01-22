@@ -1,21 +1,16 @@
 # Design Decisions & Architecture
-
 This document explains the key design decisions made while building this system and the reasoning behind them.
 
 ## Database Choice: MongoDB
 
-**Decision:** Use MongoDB with Mongoose ODM
+**Decision:** Used MongoDB with Mongoose ODM
 
 **Reasoning:**
 1. **Flexible Schema**: Different pricing types require different config structures. MongoDB's flexible schema is perfect for this.
 2. **Nested Documents**: Add-ons and availability slots naturally fit as embedded documents.
 3. **Rapid Development**: Mongoose provides excellent validation and middleware support.
 4. **JSON-First**: APIs return JSON, MongoDB stores JSON-like documents - natural fit.
-
-**Tradeoffs:**
-- No enforced referential integrity (handled in application layer)
-- Less optimal for complex joins (acceptable for this domain)
-- No built-in transactions in older versions (though available in newer MongoDB)
+5. **Familier** : Have been working on mongoDb for my recent projects.
 
 **Alternative Considered:** PostgreSQL with JSONB columns
 - Would provide referential integrity

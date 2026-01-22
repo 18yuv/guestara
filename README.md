@@ -33,11 +33,16 @@ src/
 - Services contain business logic
 - Models define data structure
 
-##  Quick Start
+Separation of concerns - each layer has one job:
 
-### Prerequisites
-- Node.js 18+
-- MongoDB 6+
+Routes: "This URL goes to this controller"
+Controllers: "Get the request, call services, send response"
+Services: "Here's the actual business logic"
+Models: "This is what the data looks like"
+
+This makes testing easier and code cleaner.
+
+##  Quick Start
 
 ### Installation
 
@@ -71,7 +76,7 @@ npm run seed
 
 6. Start the server
 ```bash
-npm run dev
+npm start
 ```
 
 7. Test the API
@@ -127,7 +132,7 @@ Supports 5 pricing types with polymorphic `pricing_config`:
 
 ##  Documentation
 
-- **[API Examples](./docs/API_EXAMPLES.md)** - Complete API reference with examples
+- **[API Examples](./docs/API_USAGE.md)** - Complete API reference with examples
 - **[Testing Guide](./docs/TESTING_GUIDE.md)** - Step-by-step testing scenarios
 - **[Design Decisions](./docs/DESIGN_DECISIONS.md)** - Architecture rationale
 
@@ -160,7 +165,7 @@ I chose MongoDB for several key reasons:
 
 4. **JSON Native**: Since the API speaks JSON, storing JSON-like documents creates a natural impedance match.
 
-The tradeoff is no enforced referential integrity, but I handle relationships at the application layer with proper validation.
+Also I have been working on mongoDb for quite a long time so I chose one of my strengths.
 
 ### Three Things I Learned
 
@@ -188,6 +193,22 @@ The hardest challenge was **implementing tax inheritance correctly**.
 - Cascading updates on tax changes
 
 The code clarity and correctness were worth the performance cost.
+
+## Additional challenges that I Faced:
+Dynamic pricing was challenging as it was based on time so had to do come up with a solution valid for it.
+
+Solved it by:
+Start time inclusic and end time excluse after turing the time into strings to do easy comaprisions.
+
+```
+tax inheritance 
+
+Item → check item.tax_applicable
+  ↓ (if undefined)
+Item → Subcategory → check subcategory.tax_applicable
+  ↓ (if undefined)
+Subcategory → Category → use category.tax_applicable
+```
 
 ### Future Improvements
 
@@ -238,7 +259,7 @@ Given more time, I would:
 - **Framework**: Express.js
 - **Database**: MongoDB with Mongoose ODM
 - **Validation**: Joi for request validation
-- **Dev Tools**: Nodemon for hot reload
+- **Dev Tools**: Nodemon for hot reload, Postman for testing, Vs code as IDE
 
 ##  API Endpoints
 

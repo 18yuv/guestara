@@ -25,7 +25,7 @@ const categorySchema = new mongoose.Schema({
     type: Number,
     min: 0,
     max: 100,
-    default: null,
+    default: undefined,
     required: function (){
         return this.tax_applicable === true; // true if tax applicable
     }
