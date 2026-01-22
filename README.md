@@ -2,10 +2,10 @@
 
 A sophisticated backend system for managing restaurant menus, services, and bookings with advanced pricing logic, tax inheritance, and availability management.
 
-## 🎥 Demo Video
+##  Demo Video
 [**Watch the Loom Walkthrough →**](your-loom-link-here)
 
-## ✨ Key Features
+##  Key Features
 
 - **Tax Inheritance System**: Dynamic tax calculation across category → subcategory → item hierarchy
 - **5 Pricing Types**: Static, Tiered, Complimentary, Discounted, and Time-based Dynamic pricing
@@ -15,7 +15,7 @@ A sophisticated backend system for managing restaurant menus, services, and book
 - **Search & Filtering**: Full-text search with multiple filters
 - **Pagination & Sorting**: Efficient data retrieval on all list endpoints
 
-## 🏗️ Architecture
+##  Architecture
 ```
 src/
 ├── config/          # Database configuration
@@ -33,7 +33,7 @@ src/
 - Services contain business logic
 - Models define data structure
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Node.js 18+
@@ -79,7 +79,7 @@ npm run dev
 curl http://localhost:3000/health
 ```
 
-## 🔑 Core Implementations
+##  Core Implementations
 
 ### Tax Inheritance
 
@@ -125,13 +125,13 @@ Supports 5 pricing types with polymorphic `pricing_config`:
 
 **Implementation**: See `src/services/bookingService.js`
 
-## 📚 Documentation
+##  Documentation
 
 - **[API Examples](./docs/API_EXAMPLES.md)** - Complete API reference with examples
 - **[Testing Guide](./docs/TESTING_GUIDE.md)** - Step-by-step testing scenarios
 - **[Design Decisions](./docs/DESIGN_DECISIONS.md)** - Architecture rationale
 
-## 🧪 Testing
+##  Testing
 
 Run the seed script to populate sample data:
 ```bash
@@ -146,7 +146,7 @@ This creates:
 
 Follow the [Testing Guide](./docs/TESTING_GUIDE.md) for comprehensive test scenarios.
 
-## 💭 Reflections
+##  Reflections
 
 ### Why MongoDB?
 
@@ -232,7 +232,7 @@ Given more time, I would:
    - CI/CD pipeline with GitHub Actions
    - Automated testing and deployment
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Runtime**: Node.js 18+ with ES6 modules
 - **Framework**: Express.js
@@ -240,7 +240,7 @@ Given more time, I would:
 - **Validation**: Joi for request validation
 - **Dev Tools**: Nodemon for hot reload
 
-## 📊 API Endpoints
+##  API Endpoints
 
 ### Categories
 - `POST /api/categories` - Create
@@ -264,10 +264,10 @@ Given more time, I would:
 - `GET /api/items/:id/availability` - Check availability
 - `PATCH /api/bookings/:id/cancel` - Cancel booking
 
-## 👤 Author
+##  Author
 
 Built as a technical assessment demonstrating system design, clean architecture, and complex business logic implementation.
 
-## 📄 License
+##  License
 
 This project is for educational/assessment purposes.
