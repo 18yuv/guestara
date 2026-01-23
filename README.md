@@ -130,6 +130,13 @@ Supports 5 pricing types with polymorphic `pricing_config`:
 
 **Implementation**: See `src/services/bookingService.js`
 
+### Rate limitng for Booking and api Limits
+
+- Limits max 100 reqs per IP
+- Limits 10 Bookings per min per IP
+
+**Implementation**: See `src/middlewares/rateLimit.js`
+
 ##  Documentation
 
 - **[API Examples](./docs/API_USAGE.md)** - Complete API reference with examples
@@ -251,6 +258,10 @@ Given more time, I would:
    - Docker Compose for local development
    - CI/CD pipeline with GitHub Actions
    - Automated testing and deployment
+
+8. **TypeScript**
+   - Shift the codeBase from js to ts for types Safety
+   - Better error handling
 
 ##  Tech Stack
 
