@@ -9,6 +9,7 @@ import itemRoutes from './routes/itemRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
 
 import { errorHandler } from './middlewares/errorHandler.js';
+import { apiLimiter } from './middlewares/rateLimit.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,6 +20,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
+
+// Rate limiting for all API routes
+app.use('/api/', apiLimiter);
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });

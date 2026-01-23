@@ -3,7 +3,7 @@
 A sophisticated backend system for managing restaurant menus, services, and bookings with advanced pricing logic, tax inheritance, and availability management.
 
 ##  Demo Video
-[**Watch the Loom Walkthrough →**](https://www.loom.com/share/28993f6120b6492990cf812e186b3963)
+[**Watch the Loom Walkthrough →**](https://www.loom.com/share/28993f6120b6492990cf812e186b3963 )
 
 ##  Key Features
 
@@ -231,9 +231,8 @@ Given more time, I would:
    - Significant performance boost for read-heavy workloads
 
 4. **Enhanced Security**
-   - JWT authentication
+   - JWT authentication and Auth Flows (Emails, Reset Password)
    - Role-based access control
-   - Rate limiting on endpoints
    - Input sanitization against injection
 
 5. **Observability**

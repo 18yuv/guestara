@@ -376,8 +376,8 @@ Given more time or for production:
 1. **Testing**: Add comprehensive unit and integration tests
 2. **Transactions**: Use MongoDB transactions for bookings
 3. **Caching**: Redis for categories and popular items
-4. **Rate Limiting**: Protect against abuse
-5. **Authentication**: JWT-based auth
+4. **Rate Limiting**: Protect against abuse for all routes
+5. **Authentication**: JWT-based auth and Email/Password Flows
 6. **Logging**: Winston or Pino for structured logs
 7. **Monitoring**: Prometheus metrics, health checks
 8. **Documentation**: Swagger/OpenAPI spec
