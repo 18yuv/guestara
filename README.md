@@ -3,7 +3,7 @@
 A sophisticated backend system for managing restaurant menus, services, and bookings with advanced pricing logic, tax inheritance, and availability management.
 
 ##  Demo Video
-[**Watch the Loom Walkthrough →**](your-loom-link-here)
+[**Watch the Loom Walkthrough →**](https://www.loom.com/share/28993f6120b6492990cf812e186b3963)
 
 ##  Key Features
 
