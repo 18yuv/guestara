@@ -267,14 +267,14 @@ All errors follow this format:
 ## Common Query Parameters
 
 ### Pagination
-- `page`: Page number (default: 1)
-- `limit`: Items per page (default: 10)
+- page: Page number (default: 1)
+- limit: Items per page (default: 10)
 
 ### Sorting
-- `sort_by`: Field to sort by (name, price, createdAt)
-- `order`: Sort order (asc, desc)
+- sort_by: Field to sort by (name, price, createdAt)
+- order: Sort order (asc, desc)
 
 ### Filtering
-- `active_only`: true/false
-- `category`: Category ID
-- `subcategory`: Subcategory ID
+- active_only: true/false
+- category: Category ID
+- subcategory: Subcategory ID
