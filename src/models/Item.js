@@ -83,14 +83,13 @@ const itemSchema = new mongoose.Schema({
 
 
 // validation for only one category or subcategory
-itemSchema.pre('validate', function(next) {
+itemSchema.pre('validate', function () {
   if (this.category && this.subcategory) {
-    next(new Error('Item cannot have both category and subcategory'));
+    throw new Error('Item cannot have both category and subcategory');
   }
   if (!this.category && !this.subcategory) {
-    next(new Error('Item must have either category or subcategory'));
+    throw new Error('Item must have either category or subcategory');
   }
-  next();
 });
 
 itemSchema.index({ category: 1, subcategory: 1, name: 1 }, { unique: true });
